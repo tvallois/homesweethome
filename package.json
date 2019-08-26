@@ -1,0 +1,45 @@
+{
+  "name": "homesweethome",
+  "version": "1.0.0",
+  "description": "Manage utilities inside your home.",
+  "main": "server.ts",
+  "author": "Thibault VALLOIS",
+  "license": "MIT",
+  "scripts": {
+    "start": "node --inspect=5858 -r ts-node/register ./server.ts",
+    "start:watch": "node_modules/nodemon/bin/nodemon.js",
+    "build": "tsc"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.spec.ts",
+      "node_modules",
+      ".git"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "yarn start",
+    "ext": "ts"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.1.1",
+    "mongoose": "^5.6.9",
+    "typescript": "^3.5.3",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.3",
+    "@types/mongoose": "^5.5.12",
+    "@types/uuid": "^3.4.5",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.3.0"
+  }
+}
